@@ -24,6 +24,7 @@ This project responds to challenge proposed by MMI Holdings
 
 
 alert home owner | alert neighbors
+------------ | -------------
 ![alert home owner](docs/app - alert house owner.png) | ![alert neighbors](docs/app - alert neighbor.png)  
 
 
@@ -47,7 +48,7 @@ alert home owner | alert neighbors
   * then alerting (by SMS and push notification) owner, and / or neighbor, then police.
 4. sms provider - we use twilio.com
 
-![prototype](docs/board-to-sms.png)
+![prototype](docs/board-to-sms.jpg)
 
 ## board (community-board) ##
 nodeJS code
