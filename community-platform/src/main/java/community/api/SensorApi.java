@@ -2,7 +2,6 @@ package community.api;
 
 import community.model.InternalLogic;
 import community.model.UserData;
-import community.model.UserUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +24,7 @@ public class SensorApi {
     @RequestMapping(value = "/alert/{uid}", method = RequestMethod.POST)
     public void alert(@PathVariable("uid") String uid, @RequestBody AlertDTO alertDTO) throws IOException {
         logger.info("alert " + alertDTO);
-        final UserData user = UserUtils.getSingleton().getUser(uid);
+        final UserData user = internalLogic.findUser(uid);
         user.addAlert(alertDTO.location, alertDTO.sensor, alertDTO.value);
 
         internalLogic.reactOnSensorAlert(user);

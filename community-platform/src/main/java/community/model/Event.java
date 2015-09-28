@@ -1,8 +1,10 @@
 package community.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @JsonAutoDetect
 public class Event {
@@ -19,8 +21,13 @@ public class Event {
         this.value = value;
     }
 
+    @JsonIgnore
     public LocalDateTime getTimestamp() {
         return timestamp;
+    }
+
+    public String getDate() {
+        return timestamp.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
     }
 
     public String getSensor() {
