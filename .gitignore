@@ -1,3 +1,4 @@
 .idea
 community-platform/target
 *.iml
+community-board/node_modules

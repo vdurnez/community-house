@@ -7,6 +7,8 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "socket.io":"latest"
+    "socket.io": "latest",
+    "jsupm_grove": "latest",
+    "request-json": "latest"
   }
 }
